@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family:'Times New Roman', Times, serif; */
+
+}
+body{
+    display:flex;
+
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px !important;
+    height: 100vh;
+    padding:20px;
+    color: black;
+    /* overflow: hidden;
+    transition: all 0.5s linear; */ 
+    background-color:#05254d;
+    overflow-y: auto;
+
+}
+.sidebar::-webkit-scrollbar{
+    width: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: #ed1c24;
+}
+i{
+    color:black;
+}
+
+.logo h1{
+    height: 5px 0px;
+    padding: 0 5px ;    
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'popins',sans-serif;
+    margin-bottom: 10px;
+    } 
+hr{
+    margin-bottom: 20px;
+}
+/* .logo h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+} */
+
+.main{
+    max-height: 1200px;
+    position: relative;
+    /* list-style-type: none; */
+    padding: 0;
+}
+.main li{
+    padding: 8px;
+    /* margin: 10px 0; */
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style-type:none;
+}
+.main li:hove{
+    background: rgba(128, 128, 128, 0.699);
+    
+}
+.activ{
+    margin-top: 5px;
+    border-bottom: 3px solid black;
+    border-radius: 3px;
+}
+.main li a {
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0px;
+    /* font-weight: 300; */
+    /* font-style: italic; */
+}
+.main li i{
+    color: #fff;
+}
+.main a span{
+    font-size: 18px;
+    margin-top: 6px;
+    color: #fff;
+}
+/* .logout{
+    position: absolute;
+    bottom:0;
+    left: 2;
+    width: 80%;
+} */
+.logout i{
+    color: #ccc;
+    font-size: 20px;
+    margin-right: 2px;
+    text-align: center;
+}
+.logout span{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* Add this CSS to style your form elements */
+/* 
+    /* Style the main content container */
+    .main-content {
+        padding: 20px;
+        width: 100%;
+        /* height: 30px; */
+        
+        
+    }
+
+    /* Style the header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        background-color:#333;
+        border-radius:5px;
+        padding: 20px;
+        height:20%;
+        /* border: 1px solid #ccc; */
+        /* box-shadow: -2px -2px 4px rgba(0,0,0,.2),2px 2px 4px rgba(0,0,0,.2); */
+        
+    }
+
+    /* Style the title section */
+    .title {
+        margin: 0;
+    }
+
+    /* Style the h2 element in the title */
+    .title h2 {
+        font-size: 28px;
+        color: #fff;
+        font-weight: 700;
+        /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    }
+    .title h1 {
+        font-size: 24px;
+        color: darkcyan;
+        font-weight: bolder;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+      
+    /* Style the h3 element for contact details */
+    .title h3 {
+        font-size: 20px;
+        margin-top:1px;
+        color: #ccc;
+        /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    }
+    .title h4 {
+        font-size: 20px;
+        margin-top:6px;
+        color: black;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+    }
+     
+    
+
+    /* Style the user info section */
+    .user-info img {
+        width: 100%;
+        height:60px;
+    }
+    .table-container{
+        max-height: 500px;
+        max-width: 1120px;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    /* Style the table */
+    .table-container table{
+        border-collapse: collapse;
+        width: 100%;
+        margin-top:10px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    /* Style table header cells */
+    .table-container th {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align:center;
+    }
+
+    /* Style table data cells */
+    .table-container td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align:center;
+    }
+   /* styles.css */
+   .delete-button {
+    background-color:#ed1c24;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.delete-button:hover{
+    transition: ease-in all 0.5s;
+    color: #fff;
+    background-color: #0a264a;
+}
+
+.update-button {
+    background-color:#0a264a; 
+    color: #FFFFFF; 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100px;
+    margin-top: 5px;
+}
+.update-button:hover{
+    transition: ease-in all 0.5s;
+    color: #fff;
+    background-color: #e92f0b;
+}
+button a{
+text-decoration: none;
+color: #fff;
+
+}
+button a:hover{
+color: #fff;
+text-decoration: none;
+}
+
+
+
+/* active button  */
+
+.deactive-button{
+    padding: 5px 15px;
+    background: rgba(14, 29, 52, 0.9);
+    width: 100px;
+    border: none;
+}
+.deactive-button:hover{
+    opacity: 0.9;
+}
+a .deactive-button{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.active-button{
+    padding: 5px 15px;
+    background-color:#ed1c24;
+    color: #fff;
+    font-weight: bold;
+    width: 100px;
+    border: none;
+}
+.active-button:hover{
+    opacity: 0.9;
+}
+a .active-button{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.box-container{
+    display: flex;
+   gap:1rem;
+   justify-content: center;
+   align-items:center;
+   height: 20% !important;
+   flex-direction: row !important;
+   flex-wrap: wrap;
+   margin-top: 20px;
+ }
+ 
+  .box-container .box{
+  width: 250px;
+  height: 220px;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 20px;
+  /* flex-wrap: wrap; */
+  border-radius: 6px;
+ }
+  .box-container .box i{
+    color: rgba(14, 29, 52, 0.9);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+  .box-container .box .fas{
+    color: #ccc;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 0%;right: 3%;
+ }
+  .box-container .box h1{
+    font-size: 4rem;
+    text-align: center;
+    color: #333;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+  .box-container .box h3{
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    font-weight: bolder;
+ }
+  .box-container .box .title{
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    text-align: center;
+ }
+  .box-container .box p{
+    font-size: 2rem;
+ }
+ 
