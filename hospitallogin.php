@@ -3,6 +3,8 @@ include("connection.php");
 session_start();
 ?>
 <?php
+
+
  if(isset($_POST['btnlogin'])){
      $email = $_POST['hemail'];
      $password = $_POST['hpassword'];
@@ -19,32 +21,32 @@ if(mysqli_num_rows($login_query)){
    $_SESSION['hospital']=$row['Id'];
    $_SESSION['hospitalname']=$row['Name'];
 
-$check_login = mysqli_fetch_assoc(mysqli_query($con,$query));
+   $check_login = mysqli_fetch_assoc(mysqli_query($con,$query));
 
-$row = mysqli_fetch_array($login_query);
+   $row = mysqli_fetch_array($login_query);
 
-if($row['Status'] == 1){
-   
-   $_SESSION['hos_name'] = $email;
+   if($row['Status'] == 1){
+      
+      $_SESSION['hos_name'] = $email;
 
-   if(isset($_SESSION['hos_name'])){
-   header("location:hospitalpanel.php");
+      if(isset($_SESSION['hos_name'])){
+      header("location:hospitalpanel.php");
+      }
+      
+
    }
-   
+   elseif($row['Status'] == 0){
+      echo "<script>
+      alert('wait for admin Approval');
+      </script>";
+      
+   }
 
-}
-elseif($row['Status'] == 0){
-   echo "<script>
-   alert('wait for admin Approval');
-   </script>";
-   
-}
+   }else{
+   $error[] = 'incorrect email or password!';
+   }
 
-}else{
-$error[] = 'incorrect email or password!';
-}
-
-}
+   }
 
 
 ?>
